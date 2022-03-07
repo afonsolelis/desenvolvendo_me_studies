@@ -2,7 +2,7 @@
 
 module SearchingAlgorithmsService
   # Class to verify if an element is included inside an array
-  class LinearSearch
+  class SearchPattern
     attr_accessor :array, :element
 
     def initialize(params)

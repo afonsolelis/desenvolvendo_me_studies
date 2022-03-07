@@ -5,7 +5,7 @@ module SearchingAlgorithms
   class LinearSearchController < ApplicationController
     def create
       render json: {
-        message: SearchingAlgorithmsService::LinearSearch.new(linear_search_params).call
+        message: SearchingAlgorithmsService::SearchPattern.new(linear_search_params).call
       }, status: :ok
     end
 

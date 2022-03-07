@@ -5,7 +5,7 @@ module SearchingAlgorithms
   class BinarySearchController < ApplicationController
     def create
       render json: {
-        message: SearchingAlgorithmsService::BinarySearch.new(params).call
+        message: SearchingAlgorithmsService::SearchPattern.new(params).call
       }, status: :ok
     end
 
