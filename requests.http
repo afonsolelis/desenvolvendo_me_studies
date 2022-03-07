@@ -1,0 +1,35 @@
+@url = http://127.0.0.1:3000
+
+###
+//First Challenge
+
+# Input : arr[] = {10, 20, 80, 30, 60, 50,
+#                      110, 100, 130, 170}
+#           x = 110;
+# Output : 6
+# Element x is present at index 6
+
+# Input : arr[] = {10, 20, 80, 30, 60, 50,
+#                      110, 100, 130, 170}
+#            x = 175;
+# Output : -1
+# Element x is not present in arr[].
+
+// for element present
+post {{url}}/searching_algorithms/linear_search
+Content-Type: application/json
+
+{
+  "array": [10, 20, 80, 30, 60, 50, 110, 100, 130, 170],
+  "element": 110
+}
+
+// for element not present
+###
+post {{url}}/searching_algorithms/linear_search
+Content-Type: application/json
+
+{
+  "array": [10, 20, 80, 30, 60, 50, 110, 100, 130, 170],
+  "element": 175
+}
