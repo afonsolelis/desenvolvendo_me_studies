@@ -2,10 +2,10 @@
 
 module SearchingAlgorithms
   # Class for demonstrate if an element is included inside an array
-  class LinearSearchController < ApplicationController
+  class BinarySearchController < ApplicationController
     def create
       render json: {
-        message: SearchingAlgorithmsService::LinearSearch.new(linear_search_params).call
+        message: SearchingAlgorithmsService::BinarySearch.new(params).call
       }, status: :ok
     end
 

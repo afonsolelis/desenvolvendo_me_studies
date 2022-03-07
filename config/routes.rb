@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :searching_algorithms do
     resources :linear_search, only: :create
+    resources :binary_search, only: :create
   end
 end
