@@ -9,4 +9,8 @@ Rails.application.routes.draw do
     resources :linear_search, only: :create
     resources :binary_search, only: :create
   end
+
+  namespace :sorting_algorithms do
+    resources :bubble_sort, only: :create
+  end
 end
