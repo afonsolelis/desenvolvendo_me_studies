@@ -3,8 +3,8 @@
 module SortingAlgorithmsService
   # Class to verify if an element is included inside an array
   class BubbleSort
-    def initialize(params)
-      @array = params[:array]
+    def initialize(param)
+      @array = param
     end
 
     def call

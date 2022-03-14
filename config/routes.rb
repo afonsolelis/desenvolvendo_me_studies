@@ -12,5 +12,6 @@ Rails.application.routes.draw do
 
   namespace :sorting_algorithms do
     resources :bubble_sort, only: :create
+    resources :counting_sort, only: :create
   end
 end
