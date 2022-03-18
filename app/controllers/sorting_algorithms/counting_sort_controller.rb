@@ -5,14 +5,22 @@ module SortingAlgorithms
   class CountingSortController < ApplicationController
     def create
       render json: {
-        message: SortingAlgorithmsService::CountingSort.new(counting_params).call
+        message: sorting_service
       }, status: :ok
     end
 
     private
 
     def counting_params
-      params[:array]
+      params.permit(:max, :min).merge(array: params[:array])
+    end
+
+    def sorting_service
+      SortingAlgorithmsService::CountingSort.new(
+        array: counting_params[:array],
+        max: counting_params[:max],
+        min: counting_params[:min]
+      ).call
     end
   end
 end
